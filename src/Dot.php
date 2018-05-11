@@ -27,14 +27,14 @@ class Dot implements ArrayAccess, Countable, IteratorAggregate, JsonSerializable
      *
      * @var array
      */
-    protected $items = [];
+    protected $items = array();
 
     /**
      * Create a new Dot instance
      *
      * @param mixed $items
      */
-    public function __construct($items = [])
+    public function __construct($items = array())
     {
         $this->items = $this->getArrayItems($items);
     }
@@ -75,7 +75,7 @@ class Dot implements ArrayAccess, Countable, IteratorAggregate, JsonSerializable
     public function clear($keys = null)
     {
         if (is_null($keys)) {
-            $this->items = [];
+            $this->items = array();
 
             return;
         }
@@ -83,7 +83,7 @@ class Dot implements ArrayAccess, Countable, IteratorAggregate, JsonSerializable
         $keys = (array) $keys;
 
         foreach ($keys as $key) {
-            $this->set($key, []);
+            $this->set($key, array());
         }
     }
 
@@ -193,7 +193,7 @@ class Dot implements ArrayAccess, Countable, IteratorAggregate, JsonSerializable
     {
         $keys = (array) $keys;
 
-        if (!$this->items || $keys === []) {
+        if (!$this->items || $keys === array()) {
             return false;
         }
 
@@ -231,7 +231,8 @@ class Dot implements ArrayAccess, Countable, IteratorAggregate, JsonSerializable
         $keys = (array) $keys;
 
         foreach ($keys as $key) {
-            if (!empty($this->get($key))) {
+            $item = $this->get($key);
+            if (!empty($item)) {
                 return false;
             }
         }
@@ -326,7 +327,7 @@ class Dot implements ArrayAccess, Countable, IteratorAggregate, JsonSerializable
 
         foreach (explode('.', $keys) as $key) {
             if (!isset($items[$key]) || !is_array($items[$key])) {
-                $items[$key] = [];
+                $items[$key] = array();
             }
 
             $items = &$items[$key];
