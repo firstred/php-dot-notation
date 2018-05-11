@@ -6,9 +6,9 @@
  * @link    https://github.com/adbario/php-dot-notation
  * @license https://github.com/adbario/php-dot-notation/blob/2.x/LICENSE.md (MIT License)
  */
-namespace Adbar\Tests;
+namespace Firstred\Tests;
 
-use Adbar\Dot;
+use Firstred\Dot;
 use ArrayIterator;
 use PHPUnit\Framework\TestCase;
 

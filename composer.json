@@ -1,5 +1,5 @@
 {
-    "name": "adbario/php-dot-notation",
+    "name": "firstred/php-dot-notation",
     "description": "PHP dot notation access to arrays",
     "keywords": ["dotnotation", "arrayaccess"],
     "homepage": "https://github.com/adbario/php-dot-notation",
@@ -26,7 +26,7 @@
             "src/helpers.php"
         ],
         "psr-4": {
-            "Adbar\\": "src"
+            "Firstred\\": "src"
         }
     },
     "config": {

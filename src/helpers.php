@@ -7,14 +7,15 @@
  * @license https://github.com/adbario/php-dot-notation/blob/2.x/LICENSE.md (MIT License)
  */
 
-use Adbar\Dot;
+use Firstred\Dot;
 
 if (! function_exists('dot')) {
     /**
      * Create a new Dot object with the given items
      *
      * @param  mixed $items
-     * @return \Adbar\Dot
+     *
+     * @return \Firstred\Dot
      */
     function dot($items)
     {
