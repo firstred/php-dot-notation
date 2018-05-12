@@ -20,7 +20,7 @@ use IteratorAggregate;
  * This class provides a dot notation access and helper functions for
  * working with arrays of data. Inspired by Laravel Collection.
  */
-class Dot implements ArrayAccess, Countable, IteratorAggregate, JsonSerializable
+class Dot implements ArrayAccess, Countable, IteratorAggregate
 {
     /**
      * The stored items

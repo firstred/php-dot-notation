@@ -565,13 +565,14 @@ class DotTest extends TestCase
      * --------------------------------------------------------------
      */
 
-    public function testJsonEncodingReturnsJson()
-    {
-        $dot = new Dot(['foo' => 'bar']);
-
-        $this->assertJsonStringEqualsJsonString(
-            json_encode(['foo' => 'bar']),
-            json_encode($dot)
-        );
-    }
+//    public function testJsonEncodingReturnsJson()
+//    {
+        // Not supported in 5.3 version
+//        $dot = new Dot(['foo' => 'bar']);
+//
+//        $this->assertJsonStringEqualsJsonString(
+//            json_encode(['foo' => 'bar']),
+//            json_encode($dot)
+//        );
+//    }
 }
